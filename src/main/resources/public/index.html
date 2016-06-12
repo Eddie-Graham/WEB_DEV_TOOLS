@@ -7,6 +7,7 @@
     <title>Web Dev Tools</title>
     <script src="/js/angular/angular.min.js"></script>
     <script src="/js/angular/angular-route.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/wdt.css">
 </head>
 
 <body>
@@ -26,10 +27,9 @@
     <h3>{{message}}</h3>
 </script>
 
-<a href="#/">Home</a>
-<a href="#/blog">Blog</a>
-<a href="#/about">About</a>
+<div ng-include="'html/header.html'"></div>
 
+<!-- Injected views -->
 <div ng-view></div>
 
 <script src="app.js"></script>
