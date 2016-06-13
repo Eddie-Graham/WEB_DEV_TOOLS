@@ -36,12 +36,19 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
+eclipse {
+	classpath {
+		containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+		containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+	}
+}
+
 task createGradleWrapper(type: Wrapper) {
 	gradleVersion = '2.1'
 }
 
 task compileLess(type: Exec) {
-    commandLine "lessc", "src/main/resources/public/less/header.less", "src/main/resources/public/css/wdt.css"
+    commandLine "lessc", "src/main/resources/public/less/_lessFiles.less", "src/main/resources/public/css/wdt.css"
 }
 
 task npmTasks {}
@@ -50,4 +57,4 @@ build.finalizedBy(npmTasks)
 
 npmTasks.dependsOn compileLess, npmInstall
 
-compileLess.mustRunAfter npmInstall
+compileLess.shouldRunAfter npmInstall

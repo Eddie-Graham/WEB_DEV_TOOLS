@@ -1,24 +1,12 @@
-.flex-container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
+@import "common.less";
+
+.logo {
+  height: @logo-size;
+  width: @logo-size;
 }
 
-.flex-item {
-  background-color: #c6bcb6;
-  height: 30px;
-  margin: 10px;
-  width: 33%;
-  text-align: center;
-  line-height: 30px;
-}
-
-body {
-  margin: 0;
-}
-
-html {
-  min-height: 100%;
-  background-color: #96897f;
+.headerBar {
+  height: @logo-size + @default-spacing-third * 2;
+  padding: @default-spacing-third;
+  background-color: #d4ca70;
 }
