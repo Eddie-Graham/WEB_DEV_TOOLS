@@ -4,17 +4,12 @@ app.config(function($routeProvider) {
     $routeProvider
 
         .when('/', {
-            templateUrl : 'pages/home.html',
+            templateUrl : 'html/home.html',
             controller  : 'HomeController'
         })
 
-        .when('/blog', {
-            templateUrl : 'pages/blog.html',
-            controller  : 'BlogController'
-        })
-
         .when('/about', {
-            templateUrl : 'pages/about.html',
+            templateUrl : 'html/about.html',
             controller  : 'AboutController'
         })
 
@@ -23,10 +18,6 @@ app.config(function($routeProvider) {
 
 app.controller('HomeController', function($scope) {
     $scope.message = 'Hello from HomeController';
-});
-
-app.controller('BlogController', function($scope) {
-    $scope.message = 'Hello from BlogController';
 });
 
 app.controller('AboutController', function($scope) {

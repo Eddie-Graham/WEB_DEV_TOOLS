@@ -3,10 +3,20 @@
 .logo {
   height: @logo-size;
   width: @logo-size;
+  float: left;
+  margin-right: @default-spacing-third;
 }
 
 .headerBar {
-  height: @logo-size + @default-spacing-third * 2;
+  overflow: auto;
   padding: @default-spacing-third;
-  background-color: #d4ca70;
+  background-color: @foreground-colour;
+}
+
+.title {
+  float: left;
+  color: @logo-colour;
+  line-height: @logo-size;
+  font-weight: bold;
+  font-size: 17px;
 }
