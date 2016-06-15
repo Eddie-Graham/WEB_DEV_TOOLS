@@ -1,0 +1,6 @@
+Dev Conventions
+
+- All .html files should have an associated .less file (with the same name)
+
+- The name of all css attributes referenced in a .html file should start with the filename
+(e.g. each css attribute in header.html should be named header-foo)
