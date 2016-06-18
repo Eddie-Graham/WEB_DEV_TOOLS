@@ -4,8 +4,12 @@ app.config(function($routeProvider) {
     $routeProvider
 
         .when('/', {
-            templateUrl : 'html/home.html',
-            controller  : 'HomeController'
+            templateUrl : 'html/home.html'
+        })
+
+        .when('/directorytree', {
+            templateUrl : 'html/directoryTree.html',
+            controller  : 'DirectoryTreeController'
         })
 
         .when('/about', {
@@ -14,12 +18,4 @@ app.config(function($routeProvider) {
         })
 
         .otherwise({redirectTo: '/'});
-});
-
-app.controller('HomeController', function($scope) {
-    $scope.message = 'Hello from HomeController';
-});
-
-app.controller('AboutController', function($scope) {
-    $scope.message = 'Hello from AboutController';
 });

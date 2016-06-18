@@ -3,7 +3,7 @@
 .tile {
   height: @tile-size;
   width: @tile-size;
-  margin: @default-spacing;
+  margin: @default-spacing-half;
   float: left;
   border: 2px solid @foreground-colour;
   color: @foreground-colour;
@@ -11,6 +11,11 @@
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+
+  &:hover {
+    color: @background-colour;
+    background-color: @foreground-colour;
+  }
 }
 
 .tile-caption {
