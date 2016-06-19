@@ -4,7 +4,8 @@ app.directive("tile", function() {
         templateUrl: "html/tile.html",
         scope: {
             buttonText: "@",
-            url: "@"
+            url: "@",
+            glyphiconType: "@"
         }
     };
 });

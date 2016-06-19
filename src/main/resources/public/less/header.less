@@ -2,7 +2,7 @@
 
 .header-logo {
   height: @logo-size;
-  width: @logo-size;
+  font-size: 25px;
   float: left;
   margin-right: @default-spacing-third;
 }
@@ -10,17 +10,20 @@
 .header-bar {
   overflow: auto;
   padding: @default-spacing-third;
-  background-color: @foreground-colour;
+  background-color: @banner-colour;
 }
 
 .header-title {
   float: left;
-  color: @logo-colour;
   height: @logo-size;
   font-weight: bold;
   font-size: 17px;
 }
 
-.header-bar-link:hover .header-title {
-  color: @background-colour !important;
+.header-bar-link {
+  color: @logo-colour !important;
+
+  &:hover {
+    color: @foreground-colour !important;
+  }
 }
